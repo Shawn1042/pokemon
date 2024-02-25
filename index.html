@@ -3,15 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js" defer></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Pokeda</title>
 </head>
 <body>
+
+    <div class="container">
+        <header>
+            <img src="/assets/pokemon-title.png" alt="Pokemon Title">
+
+            <nav>
+                <a href="">Pokemon Search</a>
+                <a href="">Poke Api v2</a>
+                <a href="">Pokegame</a>
+            </nav>
+        </header>
+    </div>
 
     <input type="text" id="pokemonName" placeholder="Enter Pokemon name...">
     <button onclick="fetchPokemon()">fetch pokemon</button>
     
     <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;">
 
+
+    <script src="index.js"></script>
 </body>
 </html>
