@@ -3,10 +3,21 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
 }
 
 
-body {
+html {
+    height: 100%;
+  }
+  
+  body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* This should make the body take up the full height of the html element */
     background-color: #232331;
     background-image: url('/assets/anime-bg.png');
     background-repeat: no-repeat;
@@ -17,24 +28,116 @@ body {
     color: white;
   }
   
+  
   body::before {
     content: '';
-    position: absolute;
+    position: fixed; /* changed from absolute to fixed to cover the whole page */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
   }
+  
 
-.container{
-    border: 1px solid red;
-    min-height: 100vh;
+.header-container{
     padding: 20px;
-    margin: 10px;
 }
 
-header{
+.hamburger-menu{
+    z-index: 1;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
     
 }
+
+.hamburger-menu > .line{
+    height: 5px;
+    width: 35px;
+    background-color: crimson;
+    border-radius: 5px;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px
+}
+
+header > img {
+    height: 3rem;
+}
+
+header > nav{
+    display: flex;
+    gap: 20px;
+}
+
+header > nav > a{
+    font-size: 1.27rem;
+}
+
+header > nav > a:hover{
+    color: lightgray;
+}
+
+@media only screen and (max-width: 650px){ 
+    
+    header{
+        width: 100%;
+        padding: 0;
+    }
+
+    header > nav > a{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 650px){ 
+    .hamburger-menu {
+        cursor: pointer;
+        display: flex;
+    }
+    
+    /* Initially hide the nav */
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        position: absolute;
+        background: linear-gradient(to right, #000000, #7f051d);
+        top: 70px;
+        right: 2000px;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    /* When active, show the nav */
+    nav.active {
+       right: 20px;
+    }
+    
+    /* Styles for the hamburger lines when the menu is active */
+    .hamburger-menu.active .line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger-menu.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+

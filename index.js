@@ -1,3 +1,12 @@
+function toggleMenu() {
+    var nav = document.getElementById("navbar");
+    var hamburger = document.getElementById("hamburger-menu");
+    nav.classList.toggle("active");
+    hamburger.classList.toggle("active");
+}
+
+
+
 
 
 async function fetchPokemon() {

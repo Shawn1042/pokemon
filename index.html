@@ -8,22 +8,28 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="header-container">
+
+        <div  id="hamburger-menu" class="hamburger-menu" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
         <header>
             <img src="/assets/pokemon-title.png" alt="Pokemon Title">
 
-            <nav>
-                <a href="">Pokemon Search</a>
-                <a href="">Poke Api v2</a>
+            <nav id="navbar">
+                <a href="">Pokemon-Search</a>
+                <a href="">PokeApiv2</a>
                 <a href="">Pokegame</a>
             </nav>
         </header>
     </div>
-
+<!-- 
     <input type="text" id="pokemonName" placeholder="Enter Pokemon name...">
     <button onclick="fetchPokemon()">fetch pokemon</button>
     
-    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;">
+    <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none;"> -->
 
 
     <script src="index.js"></script>
