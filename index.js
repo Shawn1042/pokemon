@@ -5,7 +5,24 @@ function toggleMenu() {
     hamburger.classList.toggle("active");
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        var container = document.querySelector('.container');
+        var headerContainer = document.querySelector('.header-container');
 
+        container.style.opacity = '0';
+
+        setTimeout(function() {
+            container.style.display = 'none';
+
+            headerContainer.style.display = 'block';
+            setTimeout(function() {
+                headerContainer.style.opacity = '1';
+            }, 100);
+
+        }, 1000);
+    }, 5000); 
+});
 
 
 

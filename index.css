@@ -18,7 +18,7 @@ html {
     overflow: hidden;
     margin: 0;
     padding: 0;
-    height: 100%; /* This should make the body take up the full height of the html element */
+    height: 100%; 
     background-color: #232331;
     background-image: url('/assets/anime-bg.png');
     background-repeat: no-repeat;
@@ -215,7 +215,6 @@ header > nav > a:hover{
         display: flex;
     }
     
-    /* Initially hide the nav */
     nav {
         display: none;
         flex-direction: column;
@@ -228,12 +227,10 @@ header > nav > a:hover{
         padding: 15px;
     }
 
-    /* When active, show the nav */
     nav.active {
        right: 20px;
     }
     
-    /* Styles for the hamburger lines when the menu is active */
     .hamburger-menu.active .line:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
